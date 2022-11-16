@@ -9,3 +9,4 @@ class OnonboardingFooterRow extends StatelessWidget {
     return Container();
   }
 }
+
