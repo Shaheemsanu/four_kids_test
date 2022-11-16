@@ -1,4 +1,4 @@
-/* import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class OnonboardingFooterRow extends StatelessWidget {
@@ -8,5 +8,5 @@ class OnonboardingFooterRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container();
   }
-} */
+}
 
