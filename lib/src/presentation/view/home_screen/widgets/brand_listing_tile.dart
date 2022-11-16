@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../core/constants/common_navigate.dart';
-import '../../core/theme/scroll_behaviour.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
+import '../../../core/constants/common_navigate.dart';
+import '../../../core/theme/scroll_behaviour.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
 
 class BrandListingTile extends StatelessWidget {
   const BrandListingTile({Key? key}) : super(key: key);

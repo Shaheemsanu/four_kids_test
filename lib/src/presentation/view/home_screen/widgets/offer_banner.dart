@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
-import '../widget/scroll_indicator.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
+import '../../widget/scroll_indicator.dart';
 
 class OfferBanner extends StatefulWidget {
   const OfferBanner({Key? key}) : super(key: key);

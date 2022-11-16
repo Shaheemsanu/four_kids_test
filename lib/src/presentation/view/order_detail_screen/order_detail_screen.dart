@@ -7,7 +7,7 @@ import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
-import '../home_screen/product_list_item.dart';
+import '../home_screen/widgets/product_list_item.dart';
 import '../widget/custom_app_bar.dart';
 
 class OrderDetailScreen extends StatefulWidget {
