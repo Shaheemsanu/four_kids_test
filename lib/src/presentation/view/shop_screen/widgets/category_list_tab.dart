@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
 
 class CategoryListTab extends StatefulWidget {
   const CategoryListTab({Key? key}) : super(key: key);
