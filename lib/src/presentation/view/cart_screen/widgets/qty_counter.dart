@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
 
 class QtyCounter extends StatefulWidget {
   final Function(int) onChange;
