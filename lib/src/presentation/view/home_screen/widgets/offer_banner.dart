@@ -113,6 +113,7 @@ class _OfferBannerState extends State<OfferBanner> {
       ),
     );
   }
+  
 
   Widget shopBtn() {
     return Container(
