@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fourkids/src/presentation/view/home_screen/widgets/product_list_item.dart';
-
 import '../../../core/theme/colors.dart';
 import '../../../core/theme/size_utils.dart';
 import '../../../core/theme/typography.dart';
