@@ -4,7 +4,7 @@ import 'package:fourkids/src/presentation/view/shop_screen/widgets/shop_sub_cate
 import '../../core/theme/custom_sliver_delegate.dart';
 import '../../core/theme/scroll_behaviour.dart';
 import '../../core/theme/size_utils.dart';
-import '../sub_category_screen/offer_banner_slider.dart';
+import '../sub_category_screen/widgets/offer_banner_slider.dart';
 import 'widgets/category_list_tab.dart';
 
 class ShopScreen extends StatefulWidget {

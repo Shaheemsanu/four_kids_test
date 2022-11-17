@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fourkids/src/presentation/view/profile_screen/widgets/logout.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../core/constants/common_navigate.dart';
 import '../../core/theme/size_utils.dart';
@@ -58,30 +59,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           verticalSpace(5),
           profileRowList("About Us", () => null),
           const Spacer(),
-          logOut(),
+          const LogOut(),
           verticalSpace(70)
-        ],
-      ),
-    );
-  }
-
-  Widget logOut() {
-    return InkWell(
-      onTap: () {
-        // log out
-      },
-      child: Row(
-        children: [
-          SvgPicture.asset(
-            Utils.getAssetSvg('ic_logout'),
-            height: SizeUtils.getHeight(18),
-          ),
-          horizontalSpace(8),
-          Text(
-            "Log Out",
-            style: FontUtils.getFont14Style(
-                color: AppColors.redColor, fontWeight: FontWeight.w400),
-          ),
         ],
       ),
     );

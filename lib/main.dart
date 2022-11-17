@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:fourkids/src/presentation/view/order_detail_screen/order_detail_screen.dart';
-import 'package:fourkids/src/presentation/view/order_history_screen/order_history_screen.dart';
-import 'package:fourkids/src/presentation/view/otp_screen/otp_screen.dart';
-import 'package:fourkids/src/presentation/view/product_detail_screen/product_detail_screen.dart';
-import 'package:fourkids/src/presentation/view/product_listing_screen/product_listing_screen.dart';
 import 'package:fourkids/src/presentation/view/splash_screen/splash_screen.dart';
 
 void main() {
@@ -29,7 +24,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.green,
             ),
-            home: const ProductListingScreen(),
+            home: const SplashScreen(),
             builder: (context, child) {
               return MediaQuery(
                   data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
