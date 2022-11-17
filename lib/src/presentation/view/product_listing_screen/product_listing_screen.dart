@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fourkids/src/presentation/view/product_listing_screen/widgets/filter_row.dart';
-import '../../core/constants/common_navigate.dart';
+import 'package:fourkids/src/presentation/view/product_listing_screen/widgets/product_listing_grid.dart';
 import '../../core/theme/scroll_behaviour.dart';
 import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
-import '../home_screen/widgets/product_list_item.dart';
 import '../widget/custom_app_bar.dart';
 
 class ProductListingScreen extends StatefulWidget {
@@ -37,34 +36,12 @@ class _ProductListingScreenState extends State<ProductListingScreen> {
                 verticalSpace(24),
                 const FliterRow(),
                 verticalSpace(8),
-                productListingGrid()
+                const ProductListingGrid()
               ],
             ),
           ),
         ),
       ),
     );
-  }
-
-  Widget productListingGrid() {
-    return Flexible(
-        child: GridView.builder(
-            padding: EdgeInsets.only(bottom: SizeUtils.getHeight(50)),
-            itemCount: 12,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio:
-                  SizeUtils.getHeight(15) / SizeUtils.getWidth(18),
-              crossAxisSpacing: SizeUtils.getWidth(16),
-              mainAxisSpacing: SizeUtils.getHeight(16),
-              crossAxisCount: 2,
-            ),
-            itemBuilder: (context, index) {
-              return InkWell(
-                  onTap: () {
-                    CommonNavigate(parentContext: context)
-                        .navigateProductDetailScreen();
-                  },
-                  child: const ProductListItem(width: 0));
-            }));
   }
 }
