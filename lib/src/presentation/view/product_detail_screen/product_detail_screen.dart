@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fourkids/src/presentation/view/product_detail_screen/widgets/page_scroll_indicator.dart';
 import 'package:fourkids/src/presentation/view/product_detail_screen/widgets/product_detail_appbar.dart';
 import 'package:fourkids/src/presentation/view/product_detail_screen/widgets/product_detail_sheet.dart';
+import 'package:fourkids/src/presentation/view/product_detail_screen/widgets/product_images.dart';
 import 'package:fourkids/src/presentation/view/product_detail_screen/widgets/review_bottom_sheet.dart';
 import '../../core/constants/common_navigate.dart';
 import '../../core/theme/custom_sliver_delegate.dart';
@@ -63,7 +64,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     delegate: SliverAppBarDelegate(
                         minHeight: SizeUtils.getHeight(10),
                         maxHeight: SizeUtils.getHeight(220),
-                        child: productImages())),
+                        child: const ProductImages())),
                 SliverList(
                     delegate:
                         SliverChildListDelegate([const ProductDetailSheet()]))

@@ -12,7 +12,7 @@ class ProductImages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<PageScrollIndicatorState> pageScrollIndicator =
+     GlobalKey<PageScrollIndicatorState> pageScrollIndicator =
         GlobalKey<PageScrollIndicatorState>();
     return SizedBox(
       height: SizeUtils.getHeight(220),

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fourkids/src/presentation/view/product_listing_screen/widgets/filter_row.dart';
 import '../../core/constants/common_navigate.dart';
 import '../../core/theme/scroll_behaviour.dart';
 import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
 import '../home_screen/widgets/product_list_item.dart';
 import '../widget/custom_app_bar.dart';
-import 'filter_bottom_sheet.dart';
 
 class ProductListingScreen extends StatefulWidget {
   const ProductListingScreen({Key? key}) : super(key: key);
@@ -38,7 +35,7 @@ class _ProductListingScreenState extends State<ProductListingScreen> {
                 verticalSpace(24),
                 const CustomAppBar(title: "Skating"),
                 verticalSpace(24),
-                filterRow(),
+                const FliterRow(),
                 verticalSpace(8),
                 productListingGrid()
               ],
@@ -46,62 +43,6 @@ class _ProductListingScreenState extends State<ProductListingScreen> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget filterRow() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          "26 Products",
-          style: FontUtils.getFont12Style(
-              color: AppColors.fontGrey, fontWeight: FontWeight.w500),
-        ),
-        SizedBox(
-          height: SizeUtils.getHeight(24),
-          width: SizeUtils.getWidth(75),
-          child: TextButton(
-            style: TextButton.styleFrom(
-                foregroundColor: AppColors.black,
-                backgroundColor: AppColors.white,
-                padding: EdgeInsets.zero,
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(SizeUtils.getRadius(35)))),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: SizeUtils.getHeight(12),
-                  width: SizeUtils.getHeight(12),
-                  child: SvgPicture.asset(
-                    Utils.getAssetSvg("ic_filter"),
-                    height: SizeUtils.getHeight(12),
-                  ),
-                ),
-                horizontalSpace(8),
-                Text(
-                  "Filter",
-                  style: FontUtils.getFont12Style(
-                      color: AppColors.black, fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
-            onPressed: () {
-              showModalBottomSheet(
-                  isScrollControlled: true,
-                  backgroundColor: AppColors.transparent,
-                  context: context,
-                  builder: (context) {
-                    return const FilterBottomSheet();
-                  });
-              // FilterBottomSheet(parentContext: context).show();
-            },
-          ),
-        )
-      ],
     );
   }
 
