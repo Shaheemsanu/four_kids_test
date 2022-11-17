@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
-import '../../core/widgets/custom_textfield.dart';
-import '../../core/widgets/footer_button.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
+import '../../../core/widgets/custom_textfield.dart';
+import '../../../core/widgets/footer_button.dart';
 
 class ReportDialog {
   final BuildContext parentContext;
