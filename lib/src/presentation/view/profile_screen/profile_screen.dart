@@ -8,7 +8,7 @@ import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
-import '../doc_upload_screen/select_mode_dialog.dart';
+import '../doc_upload_screen/widgets/select_mode_dialog.dart';
 import '../widget/custom_app_bar.dart';
 
 class ProfileScreen extends StatefulWidget {

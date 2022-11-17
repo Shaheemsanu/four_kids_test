@@ -5,8 +5,8 @@ import '../../../core/theme/typography.dart';
 import '../../../core/theme/utils.dart';
 
 
-class CartBillDetails extends StatelessWidget {
-  const CartBillDetails({super.key});
+class BillDetailsCart extends StatelessWidget {
+  const BillDetailsCart({super.key});
 
   @override
   Widget build(BuildContext context) {

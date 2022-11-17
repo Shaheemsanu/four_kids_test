@@ -3,11 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:convert';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
-import '../doc_upload_screen/select_mode_dialog.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
+import 'select_mode_dialog.dart';
 import 'package:dotted_border/dotted_border.dart';
 
 class DocUploadView extends StatefulWidget {

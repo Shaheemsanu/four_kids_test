@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
-import '../../core/constants/common_navigate.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/utils.dart';
-import '../../core/theme/colors.dart';
-import '../../core/theme/typography.dart';
-import '../../core/widgets/footer_button.dart';
+import '../../../core/constants/common_navigate.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/utils.dart';
+import '../../../core/theme/colors.dart';
+import '../../../core/theme/typography.dart';
+import '../../../core/widgets/footer_button.dart';
 
 class RegisterSuccessDialog extends StatefulWidget {
   const RegisterSuccessDialog({Key? key}) : super(key: key);

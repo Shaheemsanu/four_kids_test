@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:fourkids/src/presentation/view/admin_approval_screen/widgets/footer_button_admin_approval.dart';
+import 'package:fourkids/src/presentation/view/admin_approval_screen/widgets/greeting_text_admin_approval.dart';
+import 'package:fourkids/src/presentation/view/admin_approval_screen/widgets/mail_image_admin_approval.dart';
 import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/widgets/footer_button.dart';
-import '../admin_approval_screen/register_success_dialog.dart';
+import 'widgets/register_success_dialog.dart';
 
 class AdminApprovalScreen extends StatefulWidget {
   const AdminApprovalScreen({Key? key}) : super(key: key);
@@ -31,9 +34,9 @@ class _AdminApprovalScreenState extends State<AdminApprovalScreen> {
           child: Column(
             children: [
               verticalSpace(48),
-              mailImage(),
+              const MailImageAdminApproval(),
               verticalSpace(24),
-              greetingText(),
+              const GreetingTextAdminApproval(),
               // verticalSpace(17),
               reviewTitle(),
               animateImage(),
@@ -42,46 +45,11 @@ class _AdminApprovalScreenState extends State<AdminApprovalScreen> {
               verticalSpace(12),
               mobileNumber(),
               verticalSpace(24),
-              footerButton()
+              const FooterButtonAdminApproval()
             ],
           ),
         ),
       ),
-    );
-  }
-
-  Widget mailImage() {
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      height: SizeUtils.getHeight(104),
-      width: SizeUtils.getHeight(104),
-      padding: EdgeInsets.symmetric(
-          horizontal: SizeUtils.getWidth(24),
-          vertical: SizeUtils.getHeight(24)),
-      decoration:
-          const BoxDecoration(color: AppColors.white, shape: BoxShape.circle),
-      child: Image.asset(
-        Utils.getAssetPng("mail"),
-        fit: BoxFit.cover,
-      ),
-    );
-  }
-
-  Widget greetingText() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeUtils.getWidth(36)),
-      child: RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-              text: "Great! ",
-              style: FontUtils.getFont20Style(
-                  color: AppColors.lightpink, fontWeight: FontWeight.w500),
-              children: [
-                TextSpan(
-                    text: "Your Acccount\nRequested Succefully Submited.",
-                    style: FontUtils.getFont20Style(
-                        color: AppColors.black, fontWeight: FontWeight.w500))
-              ])),
     );
   }
 
@@ -91,22 +59,6 @@ class _AdminApprovalScreenState extends State<AdminApprovalScreen> {
       maxLines: 1,
       style: FontUtils.getFont14Style(
           color: AppColors.fontGrey, fontWeight: FontWeight.w500),
-    );
-  }
-
-  Widget footerButton() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeUtils.getWidth(24)),
-      child: FooterButton(
-          label: "Okay",
-          onTap: () {
-            showDialog(
-                barrierDismissible: false,
-                context: context,
-                builder: (context) {
-                  return const RegisterSuccessDialog();
-                });
-          }),
     );
   }
 

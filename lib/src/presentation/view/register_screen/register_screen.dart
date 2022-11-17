@@ -8,7 +8,7 @@ import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/widgets/custom_textfield.dart';
 import '../../core/widgets/footer_button.dart';
-import '../admin_approval_screen/register_success_dialog.dart';
+import '../admin_approval_screen/widgets/register_success_dialog.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);

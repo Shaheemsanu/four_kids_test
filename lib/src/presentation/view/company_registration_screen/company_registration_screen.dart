@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fourkids/src/presentation/view/company_registration_screen/widgets/additional_number_selection.dart';
 import '../../core/constants/form_validators.dart';
 import '../../core/theme/scroll_behaviour.dart';
 import '../../core/theme/size_utils.dart';
@@ -8,7 +9,9 @@ import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/widgets/custom_textfield.dart';
 import '../../core/widgets/footer_button.dart';
-import 'identity_card_dialogbox.dart';
+import 'widgets/identity_card_dialogbox.dart';
+
+ValueNotifier<bool> isAdded = ValueNotifier<bool>(false);
 
 class CompanyRegistrationScreen extends StatefulWidget {
   const CompanyRegistrationScreen({Key? key}) : super(key: key);
@@ -20,7 +23,7 @@ class CompanyRegistrationScreen extends StatefulWidget {
 
 class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  ValueNotifier<bool> isAdded = ValueNotifier<bool>(false);
+
   final TextEditingController _companyController = TextEditingController();
   final TextEditingController _fullNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
@@ -28,7 +31,6 @@ class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
   final TextEditingController _whatsappController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
   final TextEditingController _pincodeController = TextEditingController();
-  final TextEditingController _additionalNumber = TextEditingController();
 
   @override
   void dispose() {
@@ -39,7 +41,6 @@ class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
     _mobileController.dispose();
     _whatsappController.dispose();
     _addressController.dispose();
-    _additionalNumber.dispose();
     super.dispose();
   }
 
@@ -75,7 +76,7 @@ class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
                           verticalSpace(12),
                           mobileNumber(), // mobile number
                           verticalSpace(12),
-                          additionalNumberSelection(),
+                          const AdditionalNumberSelection(),
                           whatsappNumber(), // whatsapp number
                           verticalSpace(12),
                           email(), // email
@@ -172,18 +173,6 @@ class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
     );
   }
 
-  Widget phoneNumber() {
-    return CustomTextField(
-      label: "Additional Number",
-      controller: _additionalNumber,
-      maxLength: 10,
-      keyboardType: TextInputType.number,
-      validator: (value) {
-        return FormValidators.phoneValidate(value);
-      },
-    );
-  }
-
   Widget address() {
     return CustomTextField(
       label: "Address",
@@ -215,36 +204,5 @@ class _CompanyRegistrationScreenState extends State<CompanyRegistrationScreen> {
         ],
       ),
     );
-  }
-
-  Widget additionalNumberSelection() {
-    return ValueListenableBuilder<bool>(
-        valueListenable: isAdded,
-        builder: (context, value, child) {
-          if (value) {
-            return Column(
-              children: [verticalSpace(6), phoneNumber(), verticalSpace(12)],
-            );
-          } else {
-            return Align(
-              alignment: Alignment.centerRight,
-              child: SizedBox(
-                height: SizeUtils.getHeight(24),
-                width: SizeUtils.getHeight(24),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                      alignment: Alignment.center,
-                      padding: EdgeInsets.zero,
-                      backgroundColor: AppColors.primaryColor),
-                  child: Icon(Icons.add,
-                      color: AppColors.white, size: SizeUtils.getHeight(20)),
-                  onPressed: () {
-                    isAdded.value = true;
-                  },
-                ),
-              ),
-            );
-          }
-        });
   }
 }

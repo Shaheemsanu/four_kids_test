@@ -11,7 +11,7 @@ import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/widgets/custom_textfield.dart';
 import '../../core/widgets/footer_button.dart';
-import 'doc_upload_view.dart';
+import 'widgets/doc_upload_view.dart';
 
 class DocUploadScreen extends StatefulWidget {
   final bool isGST;

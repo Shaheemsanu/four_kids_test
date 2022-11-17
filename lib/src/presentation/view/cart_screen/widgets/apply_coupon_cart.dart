@@ -3,8 +3,8 @@ import '../../../core/theme/colors.dart';
 import '../../../core/theme/size_utils.dart';
 import '../../../core/theme/typography.dart';
 
-class CartApplyCoupen extends StatelessWidget {
-  const CartApplyCoupen({super.key});
+class ApplyCoupenCart extends StatelessWidget {
+  const ApplyCoupenCart({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fourkids/src/presentation/view/cart_screen/widgets/cart_apply_coupon.dart';
-import 'package:fourkids/src/presentation/view/cart_screen/widgets/cart_bill_details.dart';
+import 'package:fourkids/src/presentation/view/cart_screen/widgets/apply_coupon_cart.dart';
+import 'package:fourkids/src/presentation/view/cart_screen/widgets/bill_details_cart.dart';
 import 'package:fourkids/src/presentation/view/cart_screen/widgets/cart_footer_button.dart';
 import 'package:fourkids/src/presentation/view/cart_screen/widgets/cart_items.dart';
 import 'package:fourkids/src/presentation/view/cart_screen/widgets/cart_review_field.dart';
@@ -56,11 +56,11 @@ class _CartScreenState extends State<CartScreen> {
             // verticalSpace(24),
             const CartItems(),
             verticalSpace(30),
-            const CartApplyCoupen(),
+            const ApplyCoupenCart(),
             verticalSpace(16),
             const CartReviewField(),
             verticalSpace(24),
-            const CartBillDetails(),
+            const BillDetailsCart(),
             verticalSpace(16),
             const CartFooterButton(),
             verticalSpace(100)
