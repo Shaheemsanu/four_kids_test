@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../core/theme/size_utils.dart';
-import '../../core/theme/colors.dart';
+import '../../../core/theme/size_utils.dart';
+import '../../../core/theme/colors.dart';
 
 class PageScrollIndicator extends StatefulWidget {
   final int totalCount;

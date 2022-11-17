@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fourkids/src/presentation/view/order_history_screen/widgets/order_status.dart';
 import '../../core/constants/common_navigate.dart';
 import '../../core/theme/scroll_behaviour.dart';
 import '../../core/theme/size_utils.dart';
@@ -91,10 +92,13 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
                                                   fontWeight: FontWeight.w500),
                                             ),
                                             index == 3
-                                                ? status("Pending")
+                                                ? const OrderStatus(
+                                                    stats: "Pending")
                                                 : index % 2 == 0
-                                                    ? status("Delivered")
-                                                    : status("Ongoing")
+                                                    ? const OrderStatus(
+                                                        stats: "Delivered")
+                                                    : const OrderStatus(
+                                                        stats: "Ongoing")
                                           ],
                                         ),
                                         verticalSpace(4),
@@ -223,46 +227,5 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
         ),
       ),
     );
-  }
-
-  Widget status(String stats) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-          horizontal: SizeUtils.getWidth(8), vertical: SizeUtils.getHeight(3)),
-      decoration: BoxDecoration(
-          color: getStatusColor(stats),
-          borderRadius: BorderRadius.circular(SizeUtils.getRadius(16))),
-      child: Text(
-        stats,
-        style: FontUtils.getFont10Style(
-            color: stats == "Pending" ? AppColors.black : AppColors.white,
-            fontWeight: FontWeight.w500),
-      ),
-    );
-  }
-
-  Color getStatusColor(String stats) {
-    Color statusColor = AppColors.linearyellow1;
-    switch (stats) {
-      case "Ongoing":
-        {
-          statusColor = AppColors.lightBlue;
-        }
-        break;
-
-      case "Delivered":
-        {
-          statusColor = AppColors.primaryColor;
-        }
-        break;
-    }
-    return statusColor;
-    /*   Color statusColor = AppColors.linearyellow1;
-    if (stats == "Ongoing") {
-      statusColor = AppColors.lightBlue;
-    } else if (stats == "Delivered") {
-      statusColor = AppColors.primaryColor;
-    }
-    return statusColor; */
   }
 }
