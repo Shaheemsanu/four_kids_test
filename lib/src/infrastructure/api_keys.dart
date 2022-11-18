@@ -1,0 +1,12 @@
+//Tokkens Keys
+const tokenValidKey = "tokenvalid";
+const accessTokenKey = 'accesstoken';
+const userIdKey = 'userid';
+
+const loginTokkenValid =
+    'Token QKv7hYltCyruyN1aCtWDjLRlgPrLUomDBRezQCBg1G7ZZRakeK5PotrYmaD2AxFpvMskAtrGwvkkXdnkPLubnCb402l4W8bmC1x82hrhelI4sxm3uotw99pTplEaWK1DOp3WMun1WYV6w48sRE9KqeLY1RQ4vnfOTm042KwRjef8kUgU1VQhL5C3HgRGiIUhMFudZXvCX8L1exJh2elPS0778fxTsVzhwUFoc3wp8aCeBFx5mbS3cZtQJ0opfrX';
+const profileTokkenValid =
+    'Token UIHVoOHoaqp1U8P45ifXkBRDX1ZTxjYNo2IFeDfqm5t2uQbE1MNLUJxCVAXimAA2QM4ujQ9NhUZsOAyrAHdqvpDqNAlqMH1LOcbyxILY6h1kTlpP6uro2IYsKcm5zNv1b8yar69EAypiRdhCzC1jx00rlBnCl2MSe67mhZD5rrw5FpX4M6bH99kkXWlfQL609Li3AsZSpKED30EB1sgoeBw1YcygS8a4eDSbsqKyDtHJpwjGoXp6hO8bOcLrUxZ';
+
+String profileAccesstokken = '';
+String useridValue = '';
