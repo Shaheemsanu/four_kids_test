@@ -16,8 +16,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     on<_GetLoginData>((event, emit) async {
       emit(state.copyWith(isLoading: true, successOption: none()));
       final Either<MainFailures, Login> loginOptions =
-          await _loginRepo.getLoginData();
+          await _loginRepo.getLoginData(phoneNo: event.phoneNumber);
+
       print('loginOptions = $loginOptions');
+
       emit(loginOptions.fold(
           (failure) => state.copyWith(
               isLoading: false, successOption: Some(left(failure))),
