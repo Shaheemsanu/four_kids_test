@@ -4,6 +4,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import '../theme/colors.dart';
 import '../theme/size_utils.dart';
 import '../theme/typography.dart';
+
 class OtpField extends StatefulWidget {
   final TextEditingController? controller;
   final Function(String) onCompleted;

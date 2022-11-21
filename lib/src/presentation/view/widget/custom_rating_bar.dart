@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../core/theme/colors.dart';
 import '../../core/theme/size_utils.dart';
 import '../../core/theme/utils.dart';
+
 class CustomRatingBar extends StatefulWidget {
   final Function(double)? onRatingUpdate;
   final bool? ignoreGestures;

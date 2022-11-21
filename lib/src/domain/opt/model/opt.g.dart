@@ -1,25 +1,31 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'login.dart';
+part of 'opt.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
+Opt _$OptFromJson(Map<String, dynamic> json) => Opt(
       status: json['status'] as bool?,
       actionStatus: json['action_status'] as bool?,
       message: json['message'] as String?,
-      userName: json['user_name'] as String?,
+      accessTokken: json['access_tokken'] as String?,
       userId: json['user_id'] as int?,
-      registerStatus: json['register_status'] as String?,
+      userName: json['user_name'] as String?,
+      userPhone: json['user_phone'] as String?,
+      user: json['user'] == null
+          ? null
+          : User.fromJson(json['user'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LoginToJson(_$_Login instance) => <String, dynamic>{
+Map<String, dynamic> _$OptToJson(Opt instance) => <String, dynamic>{
       'status': instance.status,
       'action_status': instance.actionStatus,
       'message': instance.message,
-      'user_name': instance.userName,
+      'access_tokken': instance.accessTokken,
       'user_id': instance.userId,
-      'register_status': instance.registerStatus,
+      'user_name': instance.userName,
+      'user_phone': instance.userPhone,
+      'user': instance.user,
     };

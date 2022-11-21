@@ -20,16 +20,16 @@ Login _$LoginFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Login {
-  bool get status => throw _privateConstructorUsedError;
+  bool? get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'action_status')
   bool? get actionStatus => throw _privateConstructorUsedError;
-  String get message => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_name')
-  String get userName => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
-  int get userId => throw _privateConstructorUsedError;
+  int? get userId => throw _privateConstructorUsedError;
   @JsonKey(name: 'register_status')
-  String get registerStatus => throw _privateConstructorUsedError;
+  String? get registerStatus => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,12 +42,12 @@ abstract class $LoginCopyWith<$Res> {
       _$LoginCopyWithImpl<$Res, Login>;
   @useResult
   $Res call(
-      {bool status,
+      {bool? status,
       @JsonKey(name: 'action_status') bool? actionStatus,
-      String message,
-      @JsonKey(name: 'user_name') String userName,
-      @JsonKey(name: 'user_id') int userId,
-      @JsonKey(name: 'register_status') String registerStatus});
+      String? message,
+      @JsonKey(name: 'user_name') String? userName,
+      @JsonKey(name: 'user_id') int? userId,
+      @JsonKey(name: 'register_status') String? registerStatus});
 }
 
 /// @nodoc
@@ -63,38 +63,38 @@ class _$LoginCopyWithImpl<$Res, $Val extends Login>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
     Object? actionStatus = freezed,
-    Object? message = null,
-    Object? userName = null,
-    Object? userId = null,
-    Object? registerStatus = null,
+    Object? message = freezed,
+    Object? userName = freezed,
+    Object? userId = freezed,
+    Object? registerStatus = freezed,
   }) {
     return _then(_value.copyWith(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionStatus: freezed == actionStatus
           ? _value.actionStatus
           : actionStatus // ignore: cast_nullable_to_non_nullable
               as bool?,
-      message: null == message
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      userName: null == userName
+              as String?,
+      userName: freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      userId: null == userId
+              as String?,
+      userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as int,
-      registerStatus: null == registerStatus
+              as int?,
+      registerStatus: freezed == registerStatus
           ? _value.registerStatus
           : registerStatus // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -106,12 +106,12 @@ abstract class _$$_LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {bool status,
+      {bool? status,
       @JsonKey(name: 'action_status') bool? actionStatus,
-      String message,
-      @JsonKey(name: 'user_name') String userName,
-      @JsonKey(name: 'user_id') int userId,
-      @JsonKey(name: 'register_status') String registerStatus});
+      String? message,
+      @JsonKey(name: 'user_name') String? userName,
+      @JsonKey(name: 'user_id') int? userId,
+      @JsonKey(name: 'register_status') String? registerStatus});
 }
 
 /// @nodoc
@@ -123,38 +123,38 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? status = null,
+    Object? status = freezed,
     Object? actionStatus = freezed,
-    Object? message = null,
-    Object? userName = null,
-    Object? userId = null,
-    Object? registerStatus = null,
+    Object? message = freezed,
+    Object? userName = freezed,
+    Object? userId = freezed,
+    Object? registerStatus = freezed,
   }) {
     return _then(_$_Login(
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       actionStatus: freezed == actionStatus
           ? _value.actionStatus
           : actionStatus // ignore: cast_nullable_to_non_nullable
               as bool?,
-      message: null == message
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      userName: null == userName
+              as String?,
+      userName: freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
-              as String,
-      userId: null == userId
+              as String?,
+      userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
-              as int,
-      registerStatus: null == registerStatus
+              as int?,
+      registerStatus: freezed == registerStatus
           ? _value.registerStatus
           : registerStatus // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -162,33 +162,33 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res, _$_Login>
 /// @nodoc
 @JsonSerializable()
 class _$_Login implements _Login {
-  const _$_Login(
-      {required this.status,
-      @JsonKey(name: 'action_status') required this.actionStatus,
-      required this.message,
-      @JsonKey(name: 'user_name') required this.userName,
-      @JsonKey(name: 'user_id') required this.userId,
-      @JsonKey(name: 'register_status') required this.registerStatus});
+  _$_Login(
+      {this.status,
+      @JsonKey(name: 'action_status') this.actionStatus,
+      this.message,
+      @JsonKey(name: 'user_name') this.userName,
+      @JsonKey(name: 'user_id') this.userId,
+      @JsonKey(name: 'register_status') this.registerStatus});
 
   factory _$_Login.fromJson(Map<String, dynamic> json) =>
       _$$_LoginFromJson(json);
 
   @override
-  final bool status;
+  final bool? status;
   @override
   @JsonKey(name: 'action_status')
   final bool? actionStatus;
   @override
-  final String message;
+  final String? message;
   @override
   @JsonKey(name: 'user_name')
-  final String userName;
+  final String? userName;
   @override
   @JsonKey(name: 'user_id')
-  final int userId;
+  final int? userId;
   @override
   @JsonKey(name: 'register_status')
-  final String registerStatus;
+  final String? registerStatus;
 
   @override
   String toString() {
@@ -231,36 +231,33 @@ class _$_Login implements _Login {
 }
 
 abstract class _Login implements Login {
-  const factory _Login(
-      {required final bool status,
-      @JsonKey(name: 'action_status')
-          required final bool? actionStatus,
-      required final String message,
-      @JsonKey(name: 'user_name')
-          required final String userName,
-      @JsonKey(name: 'user_id')
-          required final int userId,
-      @JsonKey(name: 'register_status')
-          required final String registerStatus}) = _$_Login;
+  factory _Login(
+          {final bool? status,
+          @JsonKey(name: 'action_status') final bool? actionStatus,
+          final String? message,
+          @JsonKey(name: 'user_name') final String? userName,
+          @JsonKey(name: 'user_id') final int? userId,
+          @JsonKey(name: 'register_status') final String? registerStatus}) =
+      _$_Login;
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
 
   @override
-  bool get status;
+  bool? get status;
   @override
   @JsonKey(name: 'action_status')
   bool? get actionStatus;
   @override
-  String get message;
+  String? get message;
   @override
   @JsonKey(name: 'user_name')
-  String get userName;
+  String? get userName;
   @override
   @JsonKey(name: 'user_id')
-  int get userId;
+  int? get userId;
   @override
   @JsonKey(name: 'register_status')
-  String get registerStatus;
+  String? get registerStatus;
   @override
   @JsonKey(ignore: true)
   _$$_LoginCopyWith<_$_Login> get copyWith =>

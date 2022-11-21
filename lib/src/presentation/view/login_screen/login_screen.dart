@@ -97,8 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 const LoginTermsConditions(),
                 verticalSpace(14),
                 LoginFooterbutton(
-                  formKey: _formKey,phoneController: phoneController
-                )
+                    formKey: _formKey, phoneController: phoneController)
               ],
             ),
           ),

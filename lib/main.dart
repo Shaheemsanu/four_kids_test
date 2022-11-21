@@ -3,14 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fourkids/src/application/login/bloc/login_bloc.dart';
-import 'package:fourkids/app/di/injectable.dart';
 import 'package:fourkids/src/presentation/view/splash_screen/splash_screen.dart';
+import 'src/domain/core/di/injectable.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
-      await configureInjection();
+  await configureInjection();
   runApp(const MyApp());
 }
 
@@ -22,9 +22,12 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         designSize: const Size(360, 760),
         builder: (context, widget) {
-          return MultiBlocProvider(providers: [
-            BlocProvider(create: (context) => getIt<LoginBloc>(),)
-          ],
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => getIt<LoginBloc>(),
+              )
+            ],
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
               title: '4kids',

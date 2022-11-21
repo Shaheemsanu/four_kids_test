@@ -35,7 +35,8 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   void initState() {
     super.initState();
-    timerController = CountdownTimerController(endTime: endTime(), onEnd: onEnd);
+    timerController =
+        CountdownTimerController(endTime: endTime(), onEnd: onEnd);
   }
 
   @override
@@ -48,7 +49,8 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   void didUpdateWidget(covariant OtpScreen oldWidget) {
     // TODO: implement didUpdateWidget
-    timerController = CountdownTimerController(endTime: endTime(), onEnd: onEnd);
+    timerController =
+        CountdownTimerController(endTime: endTime(), onEnd: onEnd);
     super.didUpdateWidget(oldWidget);
   }
 
@@ -62,10 +64,13 @@ class _OtpScreenState extends State<OtpScreen> {
           child: Container(
             height: SizeUtils.getScreenHeight(),
             width: SizeUtils.getScreenWidth(),
-            padding:
-                EdgeInsets.symmetric(horizontal: SizeUtils.getWidth(24), vertical: SizeUtils.getHeight(24)),
+            padding: EdgeInsets.symmetric(
+                horizontal: SizeUtils.getWidth(24),
+                vertical: SizeUtils.getHeight(24)),
             decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage(Utils.getAssetPng("bg")), fit: BoxFit.cover),
+                image: DecorationImage(
+                    image: AssetImage(Utils.getAssetPng("bg")),
+                    fit: BoxFit.cover),
                 color: AppColors.white),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -90,10 +95,13 @@ class _OtpScreenState extends State<OtpScreen> {
                               ),
                             ),
                           ),
-                          Align(alignment: Alignment.bottomCenter, child: title()),
+                          Align(
+                              alignment: Alignment.bottomCenter,
+                              child: title()),
                           CustomBackButton(
                             onTap: () {
-                              CommonNavigate(parentContext: context).navigateLoginScreen();
+                              CommonNavigate(parentContext: context)
+                                  .navigateLoginScreen();
                             },
                           ),
                         ],
@@ -136,7 +144,8 @@ class _OtpScreenState extends State<OtpScreen> {
           horizontalSpace(4),
           Text(
             "OR",
-            style: FontUtils.getFont14Style(color: AppColors.orGrey, fontWeight: FontWeight.w500),
+            style: FontUtils.getFont14Style(
+                color: AppColors.orGrey, fontWeight: FontWeight.w500),
           ),
           horizontalSpace(4),
           Container(
@@ -161,8 +170,9 @@ class _OtpScreenState extends State<OtpScreen> {
   Widget title() {
     return Container(
       alignment: Alignment.center,
-      decoration:
-          BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(SizeUtils.getRadius(6))),
+      decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(SizeUtils.getRadius(6))),
       height: SizeUtils.getHeight(40),
       width: SizeUtils.getWidth(130),
       child: /* Transform.rotate(
@@ -171,7 +181,8 @@ class _OtpScreenState extends State<OtpScreen> {
           Text(
         "OTP",
         textAlign: TextAlign.center,
-        style: FontUtils.getFont24Style(color: AppColors.black, fontWeight: FontWeight.w500),
+        style: FontUtils.getFont24Style(
+            color: AppColors.black, fontWeight: FontWeight.w500),
       ),
       // ),
     );
@@ -188,7 +199,8 @@ class _OtpScreenState extends State<OtpScreen> {
         horizontalSpace(4),
         Text(
           "We will send a OTP",
-          style: FontUtils.getFont16Style(color: AppColors.darkGrey, fontWeight: FontWeight.w500),
+          style: FontUtils.getFont16Style(
+              color: AppColors.darkGrey, fontWeight: FontWeight.w500),
         ),
         const Spacer(),
         countdownTimer()
@@ -204,7 +216,9 @@ class _OtpScreenState extends State<OtpScreen> {
         SizedBox(
           height: SizeUtils.getHeight(24),
           child: TextButton(
-            style: TextButton.styleFrom(padding: EdgeInsets.zero, backgroundColor: AppColors.transparent),
+            style: TextButton.styleFrom(
+                padding: EdgeInsets.zero,
+                backgroundColor: AppColors.transparent),
             child: Text("Resend OTP",
                 style: FontUtils.getFont12Style(
                     color: AppColors.fontGrey,
@@ -212,7 +226,8 @@ class _OtpScreenState extends State<OtpScreen> {
                     decoration: TextDecoration.underline)),
             onPressed: () {
               setState(() {
-                timerController = CountdownTimerController(endTime: endTime(), onEnd: onEnd);
+                timerController =
+                    CountdownTimerController(endTime: endTime(), onEnd: onEnd);
                 timerController.start();
                 activateOtpField();
               });
@@ -244,14 +259,17 @@ class _OtpScreenState extends State<OtpScreen> {
         if (time != null) {
           return Text(
             getTime(time.min) + ":" + getTime(time.sec),
-            style: FontUtils.getFont16Style(color: AppColors.fontGrey, fontWeight: FontWeight.w500),
+            style: FontUtils.getFont16Style(
+                color: AppColors.fontGrey, fontWeight: FontWeight.w500),
           );
         } else {
           return Text("00:00",
-              style: FontUtils.getFont16Style(color: AppColors.fontGrey, fontWeight: FontWeight.w500));
+              style: FontUtils.getFont16Style(
+                  color: AppColors.fontGrey, fontWeight: FontWeight.w500));
         }
       },
-      textStyle: FontUtils.getFont16Style(color: AppColors.fontGrey, fontWeight: FontWeight.w500),
+      textStyle: FontUtils.getFont16Style(
+          color: AppColors.fontGrey, fontWeight: FontWeight.w500),
     );
   }
 

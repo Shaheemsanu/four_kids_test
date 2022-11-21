@@ -25,4 +25,3 @@ class SizeUtils {
     return ScreenUtil().screenHeight;
   }
 }
-

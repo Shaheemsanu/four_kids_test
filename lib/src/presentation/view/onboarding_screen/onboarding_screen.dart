@@ -8,7 +8,6 @@ import '../../core/theme/colors.dart';
 import '../../core/theme/typography.dart';
 import '../../core/widgets/footer_button.dart';
 
-
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
 
@@ -120,7 +119,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       height: SizeUtils.getHeight(460),
       width: SizeUtils.getScreenWidth(),
       decoration: BoxDecoration(
-          image: DecorationImage( 
+          image: DecorationImage(
               image: AssetImage(Utils.getAssetPng('onboaring_bg')),
               alignment: Alignment.topCenter,
               fit: BoxFit.cover)),

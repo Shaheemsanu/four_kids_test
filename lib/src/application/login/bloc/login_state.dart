@@ -7,9 +7,9 @@ class LoginState with _$LoginState {
       required Option<Either<MainFailures, Login>> successOption,
       required Login userLogin}) = _LoginState;
 
-  factory LoginState.initial() => const LoginState(
+  factory LoginState.initial() => LoginState(
       isLoading: false,
-      successOption: None(),
+      successOption: const None(),
       userLogin: Login(
         actionStatus: false,
         message: '',

@@ -81,7 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 }
 
-
 /*   Widget trendingListView() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,4 +112,3 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
     );
   } */
-

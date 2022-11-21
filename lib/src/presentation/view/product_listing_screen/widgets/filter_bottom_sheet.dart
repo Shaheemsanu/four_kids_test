@@ -1,4 +1,3 @@
-
 import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

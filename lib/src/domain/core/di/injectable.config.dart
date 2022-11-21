@@ -8,10 +8,10 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../../src/application/login/bloc/login_bloc.dart' as _i5;
-import '../../src/domain/login/login_repo.dart' as _i3;
-import '../../src/infrastructure/login/login_repository.dart'
-    as _i4; // ignore_for_file: unnecessary_lambdas
+import '../../../application/login/bloc/login_bloc.dart' as _i5;
+import '../../../infrastructure/login/login_repository.dart' as _i4;
+import '../../login/login_repo.dart'
+    as _i3; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]

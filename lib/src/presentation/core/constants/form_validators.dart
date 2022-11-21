@@ -40,8 +40,8 @@ class FormValidators {
   }
 
   static bool instagramLinkValidate(String value) {
-    final RegExp regExp =
-        RegExp(r'(?:(?:http|https):\/\/)?(?:www.)?(?:instagram.com|instagr.am|instagr.com)\/(\w+)');
+    final RegExp regExp = RegExp(
+        r'(?:(?:http|https):\/\/)?(?:www.)?(?:instagram.com|instagr.am|instagr.com)\/(\w+)');
     return regExp.hasMatch(value);
   }
 

@@ -5,8 +5,6 @@ import '../theme/colors.dart';
 import '../theme/size_utils.dart';
 import '../theme/utils.dart';
 
-
-
 class CustomBackButton extends StatefulWidget {
   const CustomBackButton({Key? key, this.onTap, this.color}) : super(key: key);
   final Color? color;

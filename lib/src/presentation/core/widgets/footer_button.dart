@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
 import '../theme/size_utils.dart';
 import '../theme/typography.dart';
+
 class FooterButton extends StatelessWidget {
   const FooterButton(
       {Key? key,
