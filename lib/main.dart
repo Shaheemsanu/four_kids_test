@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fourkids/src/application/login/bloc/login_bloc.dart';
-import 'package:fourkids/src/domain/core/di/injectable.dart';
+import 'package:fourkids/app/di/injectable.dart';
 import 'package:fourkids/src/presentation/view/splash_screen/splash_screen.dart';
 
 Future<void> main() async {
