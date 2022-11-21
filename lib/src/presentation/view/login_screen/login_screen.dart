@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget title() {
+  /* Widget title() {
     return Container(
       height: SizeUtils.getHeight(40),
       width: SizeUtils.getWidth(130),
@@ -234,5 +234,5 @@ class _LoginScreenState extends State<LoginScreen> {
             CommonNavigate(parentContext: context).navigateOtpScreen();
           }
         });
-  }
+  } */
 }
